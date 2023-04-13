@@ -25,7 +25,7 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         Handler().postDelayed({
-            if (context?.getSharedPreferences("dataregist", Context.MODE_PRIVATE)!!.contains("username")){
+            if (context?.getSharedPreferences("dataUser", Context.MODE_PRIVATE)!!.contains("userName")){
                 Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_loginFragment)
             }else{
                 Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_registFragment)

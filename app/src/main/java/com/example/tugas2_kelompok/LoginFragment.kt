@@ -1,5 +1,6 @@
 package com.example.tugas2_kelompok
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 
@@ -23,25 +24,32 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
         return binding.root
+
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedpref = requireContext().getSharedPreferences("dataUser", Context.MODE_PRIVATE)
-        val dataUserName = sharedpref.getString("userName", "")
-        val dataPassword = sharedpref.getString("password", "")
-        val userN = binding.etUsernamL.text.toString()
-        val pass = binding.etPaswL.text.toString()
-            binding.btnLogin.setOnClickListener {
-                if(userN == dataUserName && pass == dataPassword){
-                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-                }else{
-                    Toast.makeText(context,"Password atau Username Salah", Toast.LENGTH_LONG).show()
-                }
-            }
+        binding.tvRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registFragment)
+        }
+        data()
     }
+    fun data(){
 
+        binding.btnLogin.setOnClickListener {
+            val sharedpref = context?.getSharedPreferences("dataUser", Context.MODE_PRIVATE)
+            val userN = binding.etUsernamL.text.toString()
+            val pass = binding.etPaswL.text.toString()
+            val dataPass = sharedpref?.getString("password", "")
+            val dataUserName = sharedpref?.getString("userName", "")
+            if(userN == dataUserName && pass == dataPass){
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            }else{
+                Toast.makeText(context,"Password atau Username Salah", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
 }

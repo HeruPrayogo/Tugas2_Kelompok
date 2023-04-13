@@ -35,20 +35,19 @@ class RegistFragment : Fragment() {
             val password = binding.etPaswR.text.toString()
             val uPassword = binding.etKonfPaswR.text.toString()
                 if(password == uPassword){
-                    val login = sharedpref.edit()
-                    login.putString("nama", nama)
-                    login.putString("userName", username)
-                    login.putString("password", password)
-                    login.apply()
+                    val a = sharedpref.edit()
+                    a.putString("nama", nama)
+                    a.putString("userName", username)
+                    a.putString("password", password)
+                    a.apply()
                     findNavController().navigate(R.id.action_registFragment_to_loginFragment)
                     Toast.makeText(context,"Berhasil Regist", Toast.LENGTH_LONG).show()
                 }else{
                     Toast.makeText(context,"Password harus sama", Toast.LENGTH_LONG).show()
                 }
         }
-        binding.tvREGIST.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registFragment)
-        }
+
+
     }
 
 }
