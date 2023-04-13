@@ -2,4 +2,18 @@
     <string name="app_name">Tugas2_Kelompok</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello">Hello,</string>
+    <string name="logout">Logout</string>
+    <string name="login">LOGIN</string>
+    <string name="masukan_password">Masukan Password</string>
+    <string name="login_dua">Login</string>
+    <string name="regist">Regist</string>
+    <string name="masukan_username">Masukan Username</string>
+    <string name="register">REGISTER</string>
+    <string name="nama">Nama</string>
+    <string name="username">Username</string>
+    <string name="ulangi_password">Ulangi Password</string>
+    <string name="password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="welcome">WELCOME</string>
 </resources>
