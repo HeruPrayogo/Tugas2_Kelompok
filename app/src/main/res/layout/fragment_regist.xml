@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegistFragment">
@@ -15,7 +16,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
-        android:text="REGISTER"
+        android:text="@string/register"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:hint="Nama"
+        android:hint="@string/nama"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvREGIST" />
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etNamaR"
         android:layout_marginTop="32dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNamaR" />
@@ -51,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etUsernameR"
         android:layout_marginTop="32dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUsernameR" />
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etPaswR"
         android:layout_marginTop="32dp"
-        android:hint="Ulangi Password"
+        android:hint="@string/ulangi_password"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPaswR" />
@@ -75,7 +76,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="160dp"
         android:layout_marginTop="108dp"
-        android:text="Login"
+        android:text="@string/btn_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etKonfPaswR" />
 
